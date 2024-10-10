@@ -35,6 +35,8 @@ $color3: rgb(0, 104, 136);
   
   @import "admin-styles/_mixin";
   
+  @import "_home"; 
+
   @import "admin-styles/_dashboard";
   @import "admin-styles/_products";
   @import "admin-styles/_chart";
