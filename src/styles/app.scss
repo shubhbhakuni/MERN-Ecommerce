@@ -38,7 +38,7 @@ $color3: rgb(0, 104, 136);
   @import "_home"; 
   @import "_cart";
   @import "_shipping";
-
+  @import "_login";
   @import "admin-styles/_dashboard";
   @import "admin-styles/_products";
   @import "admin-styles/_chart";
@@ -93,6 +93,11 @@ $color3: rgb(0, 104, 136);
     }
 }
 
+.heading {
+  @include heading;
+  text-align: center;
+  margin: 1rem 0;
+}
   .admin-container {
     @include grid(1fr 4fr, 2rem);
     height: 100vh;
