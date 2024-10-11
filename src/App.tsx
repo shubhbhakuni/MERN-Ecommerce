@@ -4,9 +4,11 @@ import {lazy, Suspense} from 'react'
 import Loader from "./components/loader";
 import Header from "./components/header";
 
+
 const Home = lazy(() => import("./pages/home"));
 const Search = lazy(() => import("./pages/search"));
 const Cart = lazy(() => import("./pages/cart"));
+const Shipping = lazy(() => import("./pages/shipping"));
 
 //Admin Route importing
 const Dashboard = lazy(() => import("./pages/admin/dashboard"));
@@ -38,13 +40,16 @@ const App = () => {
         <Route path="/search" element={<Search />} />
         <Route path="/cart" element={<Cart />} />
 
-
+        {/* Logged in user routes */}
+        <Route>
+          <Route path="/shipping" element={<Shipping />} />
+        </Route>
         {/*Admin Routes */}
         <Route
-  //element={
-  //  <ProtectedRoute isAuthenticated={true} adminRoute={true} isAdmin={true} />
-  //}
->
+        //element={
+        //  <ProtectedRoute isAuthenticated={true} adminRoute={true} isAdmin={true} />
+        //}
+        >
   <Route path="/admin/dashboard" element={<Dashboard />} />
   <Route path="/admin/product" element={<Products />} />
   <Route path="/admin/customer" element={<Customers />} />
