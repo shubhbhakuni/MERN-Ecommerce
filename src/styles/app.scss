@@ -45,10 +45,25 @@ $color3: rgb(0, 104, 136);
   @import "admin-styles/_chart";
   @import "admin-styles/_dashboardapp";
   @import "admin-styles/_mediaquery";
-   
+
+.container{
+  max-width: 1367px;
+  margin: auto;
+  width: 100%;
+  overflow: auto;
+  >h1 {
+    @include heading;
+    margin: 1rem;
+    text-align: left;
+  }
+}
+
+.heading {
+  @include heading;
+  text-align: center;
+  margin: 1rem 0;
+}
 //header styling
-
-
 .header{
 
     @include flex(row, flex-end, stretch, 1.2rem);
@@ -94,11 +109,7 @@ $color3: rgb(0, 104, 136);
     }
 }
 
-.heading {
-  @include heading;
-  text-align: center;
-  margin: 1rem 0;
-}
+
   .admin-container {
     @include grid(1fr 4fr, 2rem);
     height: 100vh;
